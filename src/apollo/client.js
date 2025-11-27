@@ -7,7 +7,6 @@ const httpLink = new HttpLink({
   fetchOptions: { method: "POST" },
 });
 
-// Minimal in-memory mock used as a fallback when the network is unavailable.
 let nextCompteId = 1000;
 let nextTransactionId = 5000;
 const comptes = [];
@@ -77,7 +76,6 @@ const mockLink = new ApolloLink((operation) =>
   })
 );
 
-// Link that forwards to httpLink but falls back to mockLink on network failure.
 const fallbackLink = new ApolloLink((operation) =>
   new Observable((observer) => {
     let handled = false;
