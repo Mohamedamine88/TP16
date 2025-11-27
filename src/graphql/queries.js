@@ -1,6 +1,5 @@
 import { gql } from '@apollo/client';
 
-// Requête pour récupérer tous les comptes
 export const GET_ALL_COMPTES = gql`
 query GetAllComptes {
   allComptes {
@@ -12,7 +11,6 @@ query GetAllComptes {
 }
 `;
 
-// Requête pour récupérer un compte par ID
 export const GET_COMPTE_BY_ID = gql`
 query GetCompteById($id: ID!) {
   compteById(id: $id) {
@@ -24,7 +22,6 @@ query GetCompteById($id: ID!) {
 }
 `;
 
-// Requête pour calculer le solde total
 export const GET_TOTAL_SOLDE = gql`
 query GetTotalSolde {
   totalSolde {
@@ -35,7 +32,6 @@ query GetTotalSolde {
 }
 `;
 
-// Requête pour récupérer les comptes par type
 export const GET_COMPTE_BY_TYPE = gql`
 query GetCompteByType($type: TypeCompte!) {
   findCompteByType(type: $type) {
@@ -47,7 +43,6 @@ query GetCompteByType($type: TypeCompte!) {
 }
 `;
 
-// Requête pour récupérer les transactions d'un compte
 export const GET_COMPTE_TRANSACTIONS = gql`
 query GetCompteTransactions($id: ID!) {
   compteTransactions(id: $id) {
@@ -64,7 +59,6 @@ query GetCompteTransactions($id: ID!) {
 }
 `;
 
-// Requête pour récupérer toutes les transactions
 export const GET_ALL_TRANSACTIONS = gql`
 query GetAllTransactions {
   allTransactions {
@@ -81,7 +75,6 @@ query GetAllTransactions {
 }
 `;
 
-// Requête pour obtenir les statistiques des transactions
 export const GET_TRANSACTION_STATS = gql`
 query GetTransactionStats {
   transactionStats {
