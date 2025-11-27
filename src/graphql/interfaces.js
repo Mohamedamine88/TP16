@@ -1,4 +1,3 @@
-// Types Enum simulés en JS
 export const TypeCompte = {
   COURANT: "COURANT",
   EPARGNE: "EPARGNE",
@@ -9,7 +8,6 @@ export const TypeTransaction = {
   RETRAIT: "RETRAIT",
 };
 
-// Modèles JS (optionnel : juste pour organisation)
 export class Compte {
   constructor(id, solde, dateCreation, type) {
     this.id = id;
